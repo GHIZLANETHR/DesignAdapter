@@ -14,6 +14,15 @@ public class Test {
         adapter.setHdmi(new TV());
         uniteCentre.setVGA(adapter);
         adapter.print("Bonjour GLSID ");
+
+
+        uniteCentre.setVGA(new SuperVP());
+        uniteCentre.print("Hello World ");
+
+        HdmiVgaAdapter adapter2 = new HdmiVgaAdapter();
+        adapter2.setHdmi(new SuperVP());
+        uniteCentre.setVGA(adapter2);
+        uniteCentre.print("Bonsoir ");
     }
 
 
