@@ -1,10 +1,19 @@
 package org.ghizlane;
 
+import org.ghizlane.adapter.HdmiVgaAdapter;
+
 public class Test {
     public static void main(String[] args) {
         UniteCentre uniteCentre = new UniteCentre();
         uniteCentre.setVGA(new Ecran());
         uniteCentre.print("Bonjour");
+        uniteCentre.setVGA(new VideoProjecteur());
+        uniteCentre.print("Bonjour");
+
+        HdmiVgaAdapter adapter = new HdmiVgaAdapter();
+        adapter.setHdmi(new TV());
+        uniteCentre.setVGA(adapter);
+        adapter.print("Bonjour GLSID ");
     }
 
 
