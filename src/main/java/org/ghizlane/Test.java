@@ -1,6 +1,7 @@
 package org.ghizlane;
 
 import org.ghizlane.adapter.HdmiVgaAdapter;
+import org.ghizlane.adapter.HdmiVgaAdapterH;
 
 public class Test {
     public static void main(String[] args) {
@@ -14,6 +15,10 @@ public class Test {
         adapter.setHdmi(new TV());
         uniteCentre.setVGA(adapter);
         adapter.print("Bonjour GLSID ");
+
+        HdmiVgaAdapterH adapterH = new HdmiVgaAdapterH();
+        uniteCentre.setVGA(adapterH);
+        adapterH.print("Test GLSID ");
 
 
         uniteCentre.setVGA(new SuperVP());
